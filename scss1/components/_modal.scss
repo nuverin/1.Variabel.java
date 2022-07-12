@@ -1,0 +1,48 @@
+@use "style" as *;
+@mixin boxshadow($shadow) {
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  &__dialog {
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    @include boxshadow(-4px 2px 17px -1px rgba(0, 0, 0, 0.75));
+    margin-top: 15rem;
+    &__fade {
+      transition: all 0.4s;
+    }
+  }
+  &__header {
+    font-size: 1.2rem;
+    @extend %displayflex;
+    .btn-close {
+      background-color: transparent;
+      border: 0;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+  }
+  &__body {
+    line-height: 1.5rem;
+    margin-top: 0.9rem;
+  }
+  &__footer {
+    margin-top: 1.5rem;
+    float: right;
+  }
+}
+.active {
+  display: block;
+}
