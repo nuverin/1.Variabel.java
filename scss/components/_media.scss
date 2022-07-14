@@ -1,0 +1,86 @@
+@use "modal" as *;
+@mixin brek($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    .btn_open {
+      position: relative;
+      outline: none;
+      border: 0;
+      font-family: inherit;
+      font-size: inherit;
+      background-color: rgba(255, 255, 255, 0.178);
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+    .sidebar {
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      width: 0;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow: hidden;
+      padding-top: 60px;
+      color: #ffff;
+      transition: all 0.5s ease-in-out;
+
+      &__title {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0.5rem;
+        @at-root h5 {
+          margin-left: 0.9rem;
+        }
+        .btn-close {
+          background-color: transparent;
+          border: 0;
+          color: #ffff;
+          padding: 0 0.9rem;
+          cursor: pointer;
+        }
+      }
+      &__body {
+        padding: 0.9rem 0;
+      }
+      &__link {
+        color: #ffff;
+        text-decoration: none;
+        list-style-type: none;
+        line-height: 2.1rem;
+        margin-left: 0.9rem;
+        font-size: 0.924rem;
+        white-space: nowrap;
+      }
+    }
+    
+  }
+}
+@mixin breks($min) {
+  @media (min-width: $min) {
+    .btn_open {
+      display: none;
+    }
+    .btn-close[data-dismiss="offcanvas"] {
+      display: none;
+    }
+    .s {
+      display: none;
+    }
+    .sidebar {
+      &__menu {
+        display: flex;
+        white-space: nowrap;
+      }
+      &__link {
+        margin: 0 1.2rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: #2d2d2d;
+      }
+    }
+  }
+}
+
+@include brek(120px, 758px);
+@include breks(758px);

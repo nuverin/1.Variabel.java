@@ -41,6 +41,10 @@
   background-color: #ece9e6;
   pointer-events: all;
   font-size: 0.91rem;
+  cursor: pointer;
+  &:hover {
+    background-color: crimson;
+  }
 }
 img {
   max-width: 100%;
