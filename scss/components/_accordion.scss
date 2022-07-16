@@ -3,30 +3,28 @@
 .accordion {
   width: 90%;
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: 0.2rem auto;
   &__item {
     background-color: #fff;
     color: #111;
-    margin: 1rem 0;
+
     border-radius: 0.5rem;
     @include boxshadow(0 4px 8px 0 rgba(0, 0, 0, 0.25));
   }
   &__header {
-    padding: 0.5rem 3rem 0.5rem 1rem;
     line-height: 1.2rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: space-between;
     cursor: pointer;
     &::after {
-      content: "\002b";
-      font-size: 2rem;
-      position: absolute;
-      right: 1rem;
+      content: "\02795";
+      font-size: 0.9rem;
     }
     &.active::after {
-      content: "\2212";
+      content: "\2796";
     }
     &.active + .accordion__body {
       max-height: 500px;

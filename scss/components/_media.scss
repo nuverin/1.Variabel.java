@@ -1,4 +1,5 @@
 @use "modal" as *;
+@use "function" as *;
 @mixin brek($min, $max) {
   @media (min-width: $min) and (max-width: $max) {
     .btn_open {
@@ -8,10 +9,27 @@
       font-family: inherit;
       font-size: inherit;
       background-color: rgba(255, 255, 255, 0.178);
-      font-size: 1.2rem;
-      padding: 0.5rem;
       cursor: pointer;
     }
+    .modal {
+      
+      &__dialog {
+        padding: 1.4rem;
+        height: res(290px, $rem: true);
+        width: 70%;
+      }
+    }
+    .profile {
+      &__Name {
+        font-size: res(38px, $rem: true);
+      }
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .sidebar {
       height: 100%;
       position: fixed;
@@ -28,6 +46,7 @@
       &__title {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-right: 0.5rem;
         @at-root h5 {
           margin-left: 0.9rem;
@@ -53,7 +72,29 @@
         white-space: nowrap;
       }
     }
-    
+    .carousel {
+      &__item {
+        padding: 1rem;
+        width: 100%;
+      }
+      &__button {
+        width: 0.1rem;
+      }
+    }
+    .footer_item {
+      font-size: 1.4rem;
+    }
+    [data-icon] {
+      font-size: 1.2rem;
+    }
+    .accordion {
+      &__header {
+        padding: 0.9rem;
+      }
+    }
+    .card {
+      width: clamp(15rem, 18rem - 2vw, 20rem);
+    }
   }
 }
 @mixin breks($min) {
@@ -61,11 +102,28 @@
     .btn_open {
       display: none;
     }
+    .navbar {
+      display: flex;
+      align-items: center;
+
+      &__header h5 {
+        font-size: 1.2rem;
+      }
+    }
+
     .btn-close[data-dismiss="offcanvas"] {
       display: none;
     }
     .s {
       display: none;
+    }
+    .profile {
+      &__Name {
+        font-size: res(43px, $rem: true);
+      }
+    }
+    .navbar {
+      padding: 0.5rem;
     }
     .sidebar {
       &__menu {
@@ -74,10 +132,18 @@
       }
       &__link {
         margin: 0 1.2rem;
-        font-size: 1.4rem;
+        font-size: 1rem;
         text-decoration: none;
         color: #2d2d2d;
       }
+    }
+    .accordion {
+      &__header {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+    .card {
+      width: clamp(20rem, 20rem + 2vw, 22rem);
     }
   }
 }

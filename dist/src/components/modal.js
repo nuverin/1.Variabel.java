@@ -30,7 +30,10 @@ const close = document.querySelectorAll(".btn-cancel");
 
 // when user click windows close
 window.onclick = (event) => {
-  if (event.target === modals) {
-    modals.classList.remove("active");
+  const elem = event.target;
+  if (elem.classList.contains("active")) {
+    for (var i of modals) {
+      i.classList.remove("active");
+    }
   }
 };

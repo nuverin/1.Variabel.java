@@ -11,13 +11,12 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 99;
   background-color: rgba(255, 255, 255, 0.5);
   &__dialog {
-    width: 400px;
-    height: 250px;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
-    padding: 1rem;
+
     @include boxshadow(-4px 2px 17px -1px rgba(0, 0, 0, 0.75));
     margin-top: 15rem;
     &__fade {

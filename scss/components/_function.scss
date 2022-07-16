@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@function res($size, $rem: true) {
+  @if $rem {
+    @return math.div($size, 16px) * 1rem;
+  } @else {
+    @return math.div($size, 16px) * 1em;
+  }
+}
