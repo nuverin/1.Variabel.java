@@ -3,9 +3,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./css/App.css">
-    <script src="./scss/js/bundle.js"></script>
+    <title> vport</title>
+    <link rel="stylesheet" href="./dist/css/App.css">
+    <script src="./dist/bundle.js" defer></script>
     <script
       src="https://kit.fontawesome.com/4c3a5f88b6.js"
       crossorigin="anonymous"
@@ -13,27 +13,36 @@
   </head>
   <body>
     <header>
-      <nav class="navbar" id="navbar">
-        <div class="navbar__header">
-          <h5 class="text__white">MEDALIST</h5>
-        </div>
-        <div class="navbar__nav">
-          <ul class="navbar__menu">
-            <li><a href="" class="navbar__link active">Home</a></li>
-            <li><a href="" class="navbar__link">Perhargaan</a></li>
-            <li><a href="" class="navbar__link">PEncapaian</a></li>
-            <li><a href="" class="navbar__link">IMpian</a></li>
-          </ul>
-        </div>
-        <button class="btn btn__danger" type="button" role="button">
-          More
-        </button>
-      </nav>
+        <nav class="navbar" id="navbar">
+            <div class="navbar__header">
+            <h5 class="text__white">MEDALIST</h5>
+            </div>
+            <button class="btn_open" role="button" ><i class="fa-solid fa-bars"></i></button>
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar__header">
+                    <div class="sidebar__title">
+                        <h5 class="s">MEDALIST</h5>
+                        <button class="btn-close" data-dismiss="offcanvas" aria-controls="sidebar" tabindex="1" aria-expanded="true">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar__body">
+                        <ul class="sidebar__menu">
+                            <li><a href="#" class="sidebar__link fades">Home</a></li>
+                            <li><a href="#" class="sidebar__link fades">Perhargaan</a></li>
+                            <li><a href="#" class="sidebar__link fades">Shyap</a></li>
+                            <li><a href="#" class="sidebar__link fades">Impian</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
+    
     <section class="section1 | container">
         <div class="profile">
-            <span class="profile__Name">I am Nuverin</span>
-            <p>Web Developer</p>
+            <span class="profile__Name">I am YKNTS</span>
+            <p>YTKNTS </p>
             <div class="profile__media">
                 <i class="fa-brands fa-github" data-icon="1"></i>
                 <i class="fa-brands fa-linkedin" data-icon="2"></i>
@@ -79,7 +88,7 @@
                 <div class="user">
                     <div class="user__info">
                         
-                        <button class=" btn-open" data-change="open">Details</button>
+                        <button class=" btn-open" data-change="open1">Details</button>
                     </div>
                 </div>
             </div>
@@ -98,16 +107,35 @@
             <div class="card__footer">
                 <div class="user">
                     <div class="user__info">
-                        
-                        <button class=" btn-open" data-change="open">Details</button>
+                        <button class=" btn-open" data-change="open2">Operation</button>
                     </div>
                 </div>
             </div>
             </div>
         </div>
-      
 
         <div class="modal" id="open">
+            <div class="modal__dialog">
+            <div class="modal__header">
+                <h5>Text red</h5>
+                <button type="button" class="btn-close">
+                <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal__body">
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                eveniet possimus amet ab, est, aut praesentium nostrum aperiam,
+                alias tempore voluptatum provident? Consectetur rem, veniam
+                voluptatum impedit quisquam ut architecto!
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn-cancel" role="button" type="button">Cancel</button>
+            </div>
+            </div>
+        </div>
+        <div class="modal" id="open1">
             <div class="modal__dialog">
             <div class="modal__header">
                 <h5>Text Modal</h5>
@@ -128,8 +156,111 @@
             </div>
             </div>
         </div>
-        
-      
+        <div class="modal" id="open2">
+            <div class="modal__dialog">
+            <div class="modal__header">
+                <h5>Text sed</h5>
+                <button type="button" class=" btn-close">
+                <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal__body">
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                eveniet possimus amet ab, est, aut praesentium nostrum aperiam,
+                alias tempore voluptatum provident? Consectetur rem, veniam
+                voluptatum impedit quisquam ut architecto!
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn-cancel" role="button" type="button">Cancel</button>
+            </div>
+            </div>
+        </div>
     </section>
+    <article>
+        <div class="container ">
+            <h2 >FAQ</h2>
+                <div class="accordion">
+                    <div class="accordion__item">
+                      <div class="accordion__header">What is Web Development?
+                        
+                    </div>
+                      <div class="accordion__body">
+                        <div class="accordion__content">
+                          Web Development broadly refers to the tasks associated with
+                          developing functional websites and applications for the Internet.
+                          The web development process includes web design, web content
+                          development, client-side/server-side scripting and network security
+                          configuration, among other tasks.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion__item">
+                      <div class="accordion__header">APA ITU SASS</div>
+                      <div class="accordion__body">
+                        <div class="accordion__content">
+                           "Sass adalah bahasa skrip preprosesor yang ditafsirkan atau dikompilasi ke dalam Cascading Style Sheets. SassScript adalah bahasa scripting itu sendiri. Sass terdiri dari dua sintaks. Sintaks asli, yang disebut "sintaks indentasi,"
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion__item">
+                      <div class="accordion__header">Solid</div>
+                      <div class="accordion__body">
+                        <div class="accordion__content">
+                           " S.O.L.I.D merupakan prinsip-prinsip yang dibuat untuk membantu programmer yang menggunakan bahasa pemograman berbasis OOP, membuat kodingan yang bersih, kokoh, dan mudah maintain. "
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion__item">
+                      <div class="accordion__header">Belajar yang mana dulu?</div>
+                      <div class="accordion__body">
+                        <div class="accordion__content">
+                           " Tergantung kalian mau belajar apa sesuai dengan kebutuhan yang kalian inginkan"
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion__item">
+                      <div class="accordion__header">Hal yang aku sedang pelajarin</div>
+                      <div class="accordion__body">
+                        <div class="accordion__content">
+                           " Entah lah membingungkan"
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+        </div>
+    </article>
+    <div class="container">
+        <div class="carousel">
+               <div class="carousel__item carousel__item-selected" ><img src="./picture/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" class="img"></div>
+               <div class="carousel__item " ><img src="./picture/rui-alves-gSq7JBtGchU-unsplash.jpg" alt="takepicturefromunsplash" class="img"></div>
+               <div class="carousel__item" ><img src="./picture/rui-alves-z3ec4xAIaUw-unsplash.jpg" alt="" class="img"></div>
+        </div>
+    </div>
+        <div class="footer">
+            <footer>
+                <div class="footer__media">
+                    <a href="#icon"><i class="fa-brands fa-instagram" data-icon1></i></a>
+                    <a href="#ball"><i class="fa-solid fa-hashtag" data-icon2></i></a>
+                    <a href="#ball"><i class="fa-brands fa-github" data-icon3></i></a>
+                    <a href="#ball"><i class="fa-brands fa-twitter" data-icon4></i></a>
+                </div>
+                <ul class="footer__item">
+                    <li class="footer__item-line"><a href="">Home</a> </li>
+                    <li class="footer__item-line"><a href="">About</a> </li>
+                    <li class="footer__item-line"><a href="">tentang</a> </li>
+                </ul>
+            </footer>
+        </div>
   </body>
 </html>

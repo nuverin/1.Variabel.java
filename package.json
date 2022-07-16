@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve": "webpack serve",
+    "gulp": "gulp",
+    "sass": "sass --watch scss:css --style expanded"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "webpack-cli": "^4.10.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
