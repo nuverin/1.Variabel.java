@@ -117,6 +117,13 @@
     .s {
       display: none;
     }
+    .modal{
+      &__dialog{
+        width: 50%;
+        padding: 1.1rem;
+        height: res(300px, $rem: true);
+      }
+    }
     .profile {
       &__Name {
         font-size: res(43px, $rem: true);
